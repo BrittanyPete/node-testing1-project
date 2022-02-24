@@ -47,7 +47,7 @@ function findLargestInteger(integers) {
   }
   return largest  
 }
-console.log('5:', findLargestInteger([ {integer: 1}, {integer: 5}, {integer: 7}, {integer: 3}]))
+
 
 class Counter {
   /**
@@ -55,7 +55,7 @@ class Counter {
    * @param {number} initialNumber - the initial state of the count
    */
   constructor(initialNumber) {
-    // ✨ initialize whatever properties are needed
+    this.counter = initialNumber;
   }
 
   /**
@@ -71,7 +71,10 @@ class Counter {
    * counter.countDown() // returns 0
    */
   countDown() {
-    // ✨ implement
+    if(this.counter > 0) {
+      return this.counter--;
+    }
+    return this.counter
   }
 }
 
